@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --blue: #3d5468;
+    --blue-deep: #2b3d4d;
+    --blue-mid: #6b8299;
+    --blue-soft: #a9bccd;
+    --gold: #bf9b48;
+    --gold-soft: #e0c883;
+    --ivory: #f6f4ef;
+    --ivory-warm: #ece7db;
+    --ink: #2e3a44;
+    --muted: #7d8a95;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --script: "Great Vibes", cursive;
+    --sans: "Montserrat", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1440px; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(107, 130, 153, 0.30), transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(61, 84, 104, 0.12), transparent 55%),
+      var(--ivory);
+  }
+  .card { width: 1080px; height: 1440px; padding: 30px; }
+  .frame {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    padding: 8px;
+  }
+  .inner {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(191, 155, 72, 0.55);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 64px 46px;
+  }
+  .monogram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 118px;
+    height: 118px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--blue);
+    font-family: var(--script);
+    box-shadow: 0 0 0 7px rgba(191,155,72,0.14);
+    margin-bottom: 22px;
+  }
+  .monogram span { font-size: 56px; line-height: 1; }
+  .monogram small { font-size: 26px; color: var(--gold); }
+  .eyebrow {
+    font-size: 20px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--blue-mid);
+    margin-bottom: 20px;
+  }
+  .names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .names__name {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 80px;
+    line-height: 1.02;
+    letter-spacing: 0.01em;
+  }
+  .names__amp {
+    font-family: var(--script);
+    font-size: 62px;
+    color: var(--gold);
+    line-height: 1;
+    margin: 2px 0;
+  }
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 320px;
+    margin: 24px 0 8px;
+  }
+  .divider__line { height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .divider__diamond { width: 11px; height: 11px; background: var(--gold); transform: rotate(45deg); box-shadow: 0 0 0 4px rgba(191,155,72,0.2); }
+  .subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 32px;
+    color: var(--ink);
+  }
+  .photo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 0;
+    margin: 6px 0 4px;
+  }
+  .photo img {
+    max-height: 430px;
+    max-width: 76%;
+    object-fit: contain;
+    -webkit-mask-image: linear-gradient(to bottom, #000 88%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, #000 88%, rgba(0,0,0,0) 100%);
+  }
+  .details {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 4px;
+  }
+  .details__col { max-width: 330px; }
+  .details__sep { width: 1px; background: linear-gradient(var(--gold), transparent, var(--gold)); }
+  .details__label {
+    font-family: var(--serif);
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .details__text { font-family: var(--serif); font-size: 27px; line-height: 1.42; color: var(--ink); }
+  .details__text strong { color: var(--blue); font-weight: 600; }
+  .footer {
+    margin-top: 28px;
+    font-family: var(--script);
+    font-size: 40px;
+    color: var(--gold);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="frame">
+      <div class="inner">
+        <div class="monogram"><span>A</span><small>&amp;</small><span>S</span></div>
+        <p class="eyebrow">Together with their families</p>
+
+        <div class="names">
+          <div class="names__name">Abin Thomas</div>
+          <span class="names__amp">&amp;</span>
+          <div class="names__name">Shilpa Susan Mathew</div>
+        </div>
+
+        <div class="divider">
+          <span class="divider__line"></span>
+          <span class="divider__diamond"></span>
+          <span class="divider__line"></span>
+        </div>
+        <p class="subtitle">invite you to celebrate their wedding</p>
+
+        <div class="photo"><img src="couple-hero.png" alt="" /></div>
+
+        <div class="details">
+          <div class="details__col">
+            <div class="details__label">When</div>
+            <div class="details__text">Saturday<br /><strong>22 August 2026</strong><br />11:00 AM</div>
+          </div>
+          <div class="details__sep"></div>
+          <div class="details__col">
+            <div class="details__label">Where</div>
+            <div class="details__text"><strong>Little Flower Church</strong><br />Elamkulam<br />Reception to follow</div>
+          </div>
+        </div>
+
+        <p class="footer">Can't wait to celebrate with you</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
